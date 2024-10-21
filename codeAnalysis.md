@@ -151,4 +151,54 @@ The `load_data_engine` function is responsible for:
   ```python
   saver.restore(sess, ckpt.all_model_checkpoint_paths[0])
   ```
-``` 
+
+## removenoise.cpp Analysis
+
+Based on the code in `reduce_noise.cpp`, several types of entities and processes are identified and potentially removed as noise. 
+
+1. **Temporary Files**:
+   - Files that are created and quickly deleted.
+   - These are often used for short-term storage or intermediate processing and are usually not significant for long-term analysis.
+
+2. **Shadow File Operations**:
+   - Write or send operations that are immediately overwritten by another operation from the same process.
+   - These represent redundant operations where only the final state is relevant.
+
+3. **Shadow Process Operations**:
+   - Read or receive operations by a process that are immediately followed by another read/receive of the same file by the same process.
+   - Similar to shadow file operations, these represent redundant reads where only the final read is typically relevant.
+
+4. **Missing Edges**:
+   - Edges in the graph where one of the connected nodes (either source or destination) doesn't exist in the node table.
+   - These could represent incomplete or corrupted data.
+
+5. **Common Library Loads**:
+   - Library load events that are common across many processes.
+   - These are often routine operations that don't provide unique insights into process behavior.
+
+6. **Edges with Missing Nodes**:
+   - Any edge where either the source or destination node is not found in the node table.
+   - These could be due to data inconsistencies or partial captures of system state.
+
+7. **Redundant File Accesses**:
+   - File accesses that are repeated by the same process without intervening accesses by other processes.
+   - These might represent polling or repeated checks that don't provide new information.
+
+8. **Short-lived Interactions**:
+   - Interactions that occur within a very short time window, particularly for temporary files.
+   - These often represent transient operations that may not be significant for longer-term analysis.
+
+9. **Common System Operations**:
+   - While not explicitly mentioned in the provided code, the structure suggests that common, routine system operations might be filtered out.
+
+10. **Repeated Identical Operations**:
+    - Sequences of identical operations (like repeated reads or writes) from the same process to the same file, where only the last operation is typically relevant.
+
+The goal of this noise reduction is to remove entities and processes that are:
+- Routine and not unique to specific behaviors
+- Redundant or overwritten quickly
+- Potentially erroneous or inconsistent in the data
+- Short-lived and likely not significant for the overall system behavior analysis
+- Common across many processes and thus not indicative of specific process behaviors
+
+
