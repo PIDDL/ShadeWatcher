@@ -47,7 +47,7 @@
   2. The attention matrix, which represents the strength of connections between entities.
 - While not explicitly outputting a graph, the model can use these to make recommendations or answer queries about entity relationships.
 
-### Conclusion:
+
 The knowledge-based graph is not a static structure that's produced once, but rather a dynamic representation continuously refined as the model learns. It is "produced" through the combination of:
 1. The initial graph structure from entity interactions.
 2. The semantic information from the knowledge graph.
