@@ -17,3 +17,5 @@
 
 
 - Currently looking for the missing component in **KGAT** (link sent by Dr. Ashish).
+
+- Missing component not found as Shadewatcher divides its provenance graph into subgraphs for better anomaly detection, while a high level overview of KGAT is that it focuses on using the entire graph's high-order relationships for predicting recommendations.
