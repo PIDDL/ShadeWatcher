@@ -100,4 +100,3 @@ After obtaining the entity representations through the GNN, the next step is to 
   \]
   - Here, `λ` is a hyper-parameter that controls L2 regularization to prevent overfitting, and `\theta` refers to the model’s trainable parameters.
 
-
