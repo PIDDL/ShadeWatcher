@@ -9,7 +9,7 @@
 
 ## Progress
 - Gave a deep dive into kg.cpp which has the code for knowledge graph construction; interaction extraction not found.
-- Set up Vagrant virtual machine on ISPL, and it took some time to learn and navigate through it.
+- Set up Vagrant virtual machine on remote host and it took some time to learn and navigate through it.
 - Successfully completed the installation setup for parser and recommendation.
 - Successfully compiled all C++ files and parsed `audibeat` data; output matches that in the repo and paper.
 
@@ -19,7 +19,7 @@
  ![audibeat parse](images/audibeat%20parse%20result.png)
 
 
-- Successfully ran recommendation and results match with repo's. (confused about the flow)
+- Successfully ran recommendation and results match with repo's.
 
 
  ![recommendation result](images/train%20result%20recommendation.png)
