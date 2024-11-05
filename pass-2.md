@@ -13,6 +13,9 @@
 - Successfully completed the installation setup for parser and recommendation.
 - Successfully compiled all C++ files and parsed `audibeat` data; output matches that in the repo and paper.
 
+
+ ![audibeat parse](images/audibeat%20parse%20result.png)
+
 ## kg.cpp Understanding
 - **Node Creation and Storage:**
   - Each node (Process, File, Socket) is created with specific properties.
