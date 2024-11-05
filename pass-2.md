@@ -14,7 +14,16 @@
 - Successfully compiled all C++ files and parsed `audibeat` data; output matches that in the repo and paper.
 
 
+
+
  ![audibeat parse](images/audibeat%20parse%20result.png)
+
+
+- Successfully ran recommendation and results match with repo's. (confused about the flow)
+
+
+ ![recommendation result](images/train%20result%20recommendation.png)
+
 
 ## kg.cpp Understanding
 - **Node Creation and Storage:**
