@@ -7,7 +7,7 @@
   - `filefact_tmp.txt` for file entities.
   - `socketfact_tmp.txt` for socket entities.
   - `edgefact_tmp.txt` for relationship/edge data between entities.
-  <!-- - `nodefact_tmp.txt` for node type identifiers to differentiate between entity types in the knowledge graph. -->
+  - `nodefact_tmp.txt` for node type identifiers to differentiate between entity types in the knowledge graph.
 
 - Enhanced multi-threading setup with error handling to improve stability and prevent crashes when incorrect input or no input is given for the thread count.
 
