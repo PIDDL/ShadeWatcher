@@ -30,7 +30,7 @@
   - Each node (Process, File, Socket) is created with specific properties.
   - A unique hash is generated for each node based on its properties.
   - Nodes are stored in separate tables based on their type (ProcNodeTable, FileNodeTable, SocketNodeTable).
-  - Hash tables enable O(1) lookup time for any node using its hash.
+  
   
 - **Edge Creation and Storage:**
   - Edges represent relationships between nodes (e.g., process reading file).
@@ -44,7 +44,6 @@
   - ProcInteractionTable tracks all interactions involving processes.
   - Each interaction table maps an entity's hash to a vector of all its edges.
   - Purpose: Quick access to all interactions of a specific entity.
-  - Used for: Security monitoring, behavior analysis, forensics.
   
 - **Why Track Interactions:**
   - **Security:** Monitor file access patterns and process behavior.
