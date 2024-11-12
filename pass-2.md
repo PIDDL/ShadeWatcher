@@ -16,7 +16,7 @@
 
 
 
- ![audibeat parse](images/audibeat%20parse%20result.png)
+ ![audibeat parsed](images/audibeat%20parse%20result.png)
 
 
 - Successfully ran recommendation and results match with repo's.
